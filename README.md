@@ -146,11 +146,18 @@ mkdir node1 node2
 
 4. repeat above for node2
 ​
-16. Initialize nodes
+5. Save passwords & Account addresses for use later
 ```bash
-./geth init puppernet.json --datadir node1
-./geth init puppernet.json --datadir node2
+echo 'node1' > node1/password.txt
+echo 'node2’ > node2/password.txt
 ```
+
+```bash
+echo ‘NODE1adress >> accounts.txt
+echo ‘NODE2adress >> accounts.txt
+```
+
+
 
 ![new-account](Images/NewAccount.png)
 
@@ -188,12 +195,17 @@ Use MyCrypto like from the previous class, and explain to the students that in t
 
 ![custom-node](Images/Puppeth.jpg)
 
-​
-```
+
 ​
 ## Starting the Blockchain
 
-1. launch the first node into mining mode with the following command:
+1. Initialize nodes
+```bash
+./geth init puppernet.json --datadir node1
+./geth init puppernet.json --datadir node2
+```
+
+2. launch the first node into mining mode with the following command:
 ```bash
 #Alternately use --mine console to open up java console and other options such as roc api can be used to protect your transactions this is just to get running
 
@@ -203,7 +215,7 @@ Use MyCrypto like from the previous class, and explain to the students that in t
 
 ![encode](Images/Encode.jpg)
 
-2. Launch second node 
+3. Launch second node 
 ```bash
 ./geth --datadir node2 --unlock "NODE2_address" --mine --port 30305 --bootnodes enode://YOUR_ENDCODE_FROM_NODE1 --password node2/password.txt  --allow-insecure-unlock
 ```
@@ -241,11 +253,11 @@ Click on the "Save & Use Custom Node" button, to use the network; double-check t
 
 6. Send a transaction from the `node1` account to the `node2` account.
 
-7 Copy the transaction hash and paste it into the "TX Status" section of the app, or click "TX Status" in the popup.
+7. Copy the transaction hash and paste it into the "TX Status" section of the app, or click "TX Status" in the popup.
 
-* The transaction is should now read Succesfull! C with the metadata (status, tx hash, block number, etc).
+8. The transaction is should now read Succesfull! C with the metadata (status, tx hash, block number, etc).
 
-* Celebrate, I just created a blockchain and sent a transaction!
+9. Celebrate, I just created a blockchain and sent a transaction!
 
 ![transaction-success](Images/Check_TX_Status.jpg)
 
