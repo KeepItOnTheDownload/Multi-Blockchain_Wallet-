@@ -148,13 +148,13 @@ mkdir node1 node2
 ​
 5. Save passwords & Account addresses for use later
 ```bash
-echo 'node1' > node1/password.txt
-echo 'node2’ > node2/password.txt
+echo 'node1pswd' > node1/password.txt
+echo 'node2pswd' > node2/password.txt
 ```
 
 ```bash
-echo ‘NODE1adress >> accounts.txt
-echo ‘NODE2adress >> accounts.txt
+echo 'NODE1adress' >> accounts.txt
+echo 'NODE2adress' >> accounts.txt
 ```
 
 
